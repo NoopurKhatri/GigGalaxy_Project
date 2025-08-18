@@ -17,6 +17,7 @@ import {
   RouterProvider,
   Outlet
 } from "react-router-dom"
+import Register from "./pages/register/Register.jsx";
 
 
 
@@ -72,6 +73,10 @@ function App() {
         {
           path:"/login",
           element:<Login/>
+        },
+        {
+          path:"/register",
+          element:<Register/>
         }
       ]
     },
