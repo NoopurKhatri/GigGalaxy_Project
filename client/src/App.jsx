@@ -9,6 +9,7 @@ import Orders from "./pages/orders/Orders.jsx";
 import Messages from "./pages/messages/Messages.jsx";
 import Message from "./pages/message/Message.jsx";
 import MyGigs from "./pages/myGigs/MyGigs.jsx";
+import Login from "./pages/login/Login.jsx";
 import "./app.scss"
 
 import {
@@ -67,6 +68,10 @@ function App() {
         {
           path:"/message/:id",
           element:<Message/>
+        },
+        {
+          path:"/login",
+          element:<Login/>
         }
       ]
     },
