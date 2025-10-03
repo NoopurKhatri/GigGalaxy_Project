@@ -13,25 +13,31 @@ import Login from "./pages/login/Login.jsx";
 import "./app.scss"
 
 import {
+  QueryClient,
+  QueryClientProvider,
+} from "@tanstack/react-query";
+
+import {
   createBrowserRouter,
   RouterProvider,
   Outlet
 } from "react-router-dom"
 import Register from "./pages/register/Register.jsx";
 
-
-
 function App() {
+  const queryClient = new QueryClient();
 
-  const Layout = ()=>{
+  const Layout = () => {
     return (
       <div className="app">
-      <Navbar/>
-      <Outlet/>
-      <Footer/>
+        <QueryClientProvider client={queryClient}>
+          <Navbar />
+          <Outlet />
+          <Footer />
+        </QueryClientProvider>
       </div>
-    )
-  }
+    );
+  };
 
   const router = createBrowserRouter([
     {
